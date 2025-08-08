@@ -67,6 +67,12 @@ fun main() {
     println("Unit value: $unit")
 
     normalVarargs(1, 2, 3, 4, 5)
+
+    val fun1 = ::printLength
+    fun1("Hello, Kotlin Island 1!")
+
+    val fun2 = { println("Hello, Kotlin Island 2!") }
+    fun2()
 }
 
 fun printLength(obj: Any?) {
