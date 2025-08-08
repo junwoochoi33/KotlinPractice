@@ -33,7 +33,35 @@ fun main() {
     println("length of str1: ${str1?.length ?: "null"}")
     // println("length of str1: ${str1!!.length}")
 
+    val name = "Alice"
+    println("Uppercased Name: ${name.let {
+        println("Uppercasing name: $it")
+        it.uppercase()
+    }}")
+    name.run {
+        println("Calculating length of name: $this")
+        this.length
+    }
+    println("Built Sentence: ${
+        with(StringBuilder()) {
+            append("Hello, ")
+            append(name)
+            toString()
+        }
+    }")
 
+    val coordinate = Coordinate().apply {
+        longitude = 12.34
+        latitude = 56.78
+    }
+    println("Coordinate: Latitude = ${coordinate.latitude}, Longitude = ${coordinate.longitude}")
+
+    val list = mutableListOf(1, 2, 3)
+    list.also {
+        println("Before adding: $it")
+    }.add(4).let {
+        println("After adding: $list")
+    }
 }
 
 
