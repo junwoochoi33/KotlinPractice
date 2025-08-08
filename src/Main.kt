@@ -79,6 +79,8 @@ fun main() {
 
     val add : (Int, Int) -> Int = fun(x, y) = x + y
     println("Add Result of 5 and 10: ${add(5, 10)}")
+
+    repeat(10) { println("Repeat action: $it") }
 }
 
 fun printLength(obj: Any?) {
@@ -100,5 +102,11 @@ fun normalVarargs(vararg counts: Int) {
 fun printAll(vararg words: String) {
     for (word in words) {
         println(word)
+    }
+}
+
+inline fun repeat(times: Int, action: (Int) -> Unit): Unit {
+    for (index in 0 until times) {
+        action(index)
     }
 }
