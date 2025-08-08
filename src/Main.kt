@@ -1,5 +1,8 @@
 import domain.config.Settings
 import domain.model.*
+import extensions.sayHello
+
+typealias StringAlias = String
 
 fun main() {
 
@@ -21,8 +24,10 @@ fun main() {
     val circle: Shape = Circle(7.0)
     println("Circle Area: ${circle.area()}")
 
-    fun String.sayHello() = println("Hello, $this!")
     "World".sayHello()
+
+    val user: StringAlias = "John Doe"
+    println("User: $user")
 }
 
 
