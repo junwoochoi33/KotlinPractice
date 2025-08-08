@@ -28,6 +28,12 @@ fun main() {
 
     val user: StringAlias = "John Doe"
     println("User: $user")
+
+    val str1 : String? = null
+    println("length of str1: ${str1?.length ?: "null"}")
+    // println("length of str1: ${str1!!.length}")
+
+
 }
 
 
