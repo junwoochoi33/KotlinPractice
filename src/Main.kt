@@ -73,6 +73,9 @@ fun main() {
 
     val fun2 = { println("Hello, Kotlin Island 2!") }
     fun2()
+
+    val words = arrayOf("Hello", "America")
+    printAll(*words)
 }
 
 fun printLength(obj: Any?) {
@@ -89,4 +92,10 @@ fun sayHello(name: String): Unit {
 
 fun normalVarargs(vararg counts: Int) {
     println("Counts: ${counts.joinToString(", ")}")
+}
+
+fun printAll(vararg words: String) {
+    for (word in words) {
+        println(word)
+    }
 }
