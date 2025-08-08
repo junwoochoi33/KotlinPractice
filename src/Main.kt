@@ -81,6 +81,30 @@ fun main() {
     println("Add Result of 5 and 10: ${add(5, 10)}")
 
     repeat(10, { println("Repeat action: $it") }, ::printPipe)
+
+    println("5 multiply 10: ${5 multiply 10}")
+
+    println("max and min between 2 and 3: ${max(2, 3)}, ${min(2, 3)}")
+
+    val score: Int = 78
+    if (score >= 90) {
+        println("Grade: A")
+    } else if (score in 80..89) {
+        println("Grade: B")
+    } else if (score in 70..79) {
+        println("Grade: C")
+    } else if (score in 60..69) {
+        println("Grade: D")
+    } else {
+        println("Grade: F")
+    }
+
+    for (i in 1..5) println("Counting: $i")
+    for (i in 5 downTo 1) println("Counting down: $i")
+    for (i in 1 until 5) println("Counting up to 5: $i")
+    for (i in 1..10 step 2) println("Counting by twos: $i")
+
+    retFunc()
 }
 
 fun printLength(obj: Any?) {
@@ -116,3 +140,30 @@ fun printPipe() {
     print("|")
 }
 
+infix fun Int.multiply(other: Int): Int {
+    return this * other
+}
+
+fun max(a: Int, b: Int): Int = if (a > b) a else b
+
+fun min(a: Int, b: Int): Int = if (a < b) {
+    a
+} else {
+    b
+}
+
+fun inlineLambda(a: Int, b: Int, out: (Int, Int) -> Unit) {
+    println("start of inlineLambda")
+    out(a, b)
+    println("end of inlineLambda")
+}
+
+fun retFunc() {
+    println("start of retFunc")
+    inlineLambda(13, 3) lit@{ a, b ->
+        val result = a + b
+        if (result > 10) return@lit
+        println("result: $result")
+    }
+    println("end of retFunc")
+}
