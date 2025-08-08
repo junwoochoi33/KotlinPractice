@@ -1,7 +1,5 @@
-import domain.model.Animal
-import domain.model.Car
-import domain.model.Dog
-import domain.model.Person
+import domain.config.Settings
+import domain.model.*
 
 fun main() {
 
@@ -13,4 +11,13 @@ fun main() {
 
     val car = Car()
     car.move()
+
+    val bankAccount = BankAccount(1000)
+    println("Bank Account: ${bankAccount.getBalance()}")
+
+    Settings.toggleDarkMode()
+    println("Dark Mode Enabled: ${Settings.darkModeEnabled}")
+
+    val circle: Shape = Circle(7.0)
+    println("Circle Area: ${circle.area()}")
 }
