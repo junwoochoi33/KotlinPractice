@@ -65,6 +65,8 @@ fun main() {
 
     val unit: Unit = sayHello("Alice")
     println("Unit value: $unit")
+
+    normalVarargs(1, 2, 3, 4, 5)
 }
 
 fun printLength(obj: Any?) {
@@ -77,4 +79,8 @@ fun printLength(obj: Any?) {
 
 fun sayHello(name: String): Unit {
     println("Hello, $name!")
+}
+
+fun normalVarargs(vararg counts: Int) {
+    println("Counts: ${counts.joinToString(", ")}")
 }
