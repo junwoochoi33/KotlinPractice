@@ -62,6 +62,19 @@ fun main() {
     }.add(4).let {
         println("After adding: $list")
     }
+
+    val unit: Unit = sayHello("Alice")
+    println("Unit value: $unit")
 }
 
+fun printLength(obj: Any?) {
+    when (obj) {
+        is String -> println("Length of string: ${obj.length}")
+        is List<*> -> println("Length of list: ${obj.size}")
+        else -> println("Unknown type")
+    }
+}
 
+fun sayHello(name: String): Unit {
+    println("Hello, $name!")
+}
