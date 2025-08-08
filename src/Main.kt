@@ -76,6 +76,9 @@ fun main() {
 
     val words = arrayOf("Hello", "America")
     printAll(*words)
+
+    val add : (Int, Int) -> Int = fun(x, y) = x + y
+    println("Add Result of 5 and 10: ${add(5, 10)}")
 }
 
 fun printLength(obj: Any?) {
