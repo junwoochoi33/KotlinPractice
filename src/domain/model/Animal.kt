@@ -1,4 +1,4 @@
-package domain
+package domain.model
 
 open class Animal(val name: String) {
 

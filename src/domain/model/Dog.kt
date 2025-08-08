@@ -1,4 +1,4 @@
-package domain
+package domain.model
 
 class Dog(name: String) : Animal(name) {
 

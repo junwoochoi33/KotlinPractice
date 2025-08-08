@@ -1,4 +1,4 @@
-package domain
+package domain.model
 
 class Person(val name: String, var age: Int) {
 

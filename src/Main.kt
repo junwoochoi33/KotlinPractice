@@ -1,6 +1,7 @@
-import domain.Animal
-import domain.Dog
-import domain.Person
+import domain.model.Animal
+import domain.model.Car
+import domain.model.Dog
+import domain.model.Person
 
 fun main() {
 
@@ -9,4 +10,7 @@ fun main() {
 
     val dog: Animal = Dog("Charlie")
     dog.sound()
+
+    val car = Car()
+    car.move()
 }
