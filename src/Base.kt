@@ -1,5 +1,3 @@
-package domain.model
-
 open class Base {
     open val x : Int = 1
     open fun f() = println("Base function f() called, x = $x")
