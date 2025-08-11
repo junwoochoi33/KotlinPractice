@@ -104,6 +104,13 @@ fun main() {
     retFunc()
 
     val alice: Person = Developer("Alice", 30)
+
+    val clone001 = object : Person("clone-001") {
+        override fun work() = println("clone-001 is working.")
+    }
+    clone001.work()
+
+
 }
 
 fun printLength(obj: Any?) {
