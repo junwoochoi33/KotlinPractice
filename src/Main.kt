@@ -6,9 +6,6 @@ typealias StringAlias = String
 
 fun main() {
 
-    val person = Person("Alice", 30)
-    person.introduce()
-
     val dog: Animal = Dog("Charlie")
     dog.sound()
 
@@ -105,6 +102,8 @@ fun main() {
     for (i in 1..10 step 2) println("Counting by twos: $i")
 
     retFunc()
+
+    val alice: Person = Developer("Alice", 30)
 }
 
 fun printLength(obj: Any?) {

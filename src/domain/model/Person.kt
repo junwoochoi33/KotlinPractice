@@ -1,8 +1,12 @@
 package domain.model
 
-class Person(val name: String, var age: Int) {
+open class Person {
 
-    fun introduce() {
-        println("Hello, my name is $name and I am $age years old.")
+    constructor(firstName: String) {
+        println("Person created with name: $firstName")
+    }
+
+    constructor(firstName: String, age: Int) {
+        println("Person created with name: $firstName and age: $age")
     }
 }
