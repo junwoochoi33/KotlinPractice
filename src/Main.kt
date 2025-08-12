@@ -110,7 +110,12 @@ fun main() {
     }
     clone001.work()
 
-
+    val myPrinter = object : Printer("MyPrinter") {
+        override fun print() {
+            println("Printing from $name")
+        }
+    }
+    myPrinter.print()
 }
 
 fun printLength(obj: Any?) {
@@ -172,4 +177,8 @@ fun retFunc() {
         println("result: $result")
     }
     println("end of retFunc")
+}
+
+abstract class Printer(val name: String) {
+    abstract fun print()
 }
