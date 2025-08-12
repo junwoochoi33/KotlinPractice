@@ -116,6 +116,12 @@ fun main() {
         }
     }
     myPrinter.print()
+
+    println(User::class)
+    val userClass = User::class
+    userClass.members.forEach {
+        println("Member: ${it.name}, Return Type: ${it.returnType}")
+    }
 }
 
 fun printLength(obj: Any?) {
