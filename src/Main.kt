@@ -122,6 +122,9 @@ fun main() {
     userClass.members.forEach {
         println("Member: ${it.name}, Return Type: ${it.returnType}")
     }
+
+    val array: Array<Int> = Array(5) { it * it}
+    println(array.joinToString(", "))
 }
 
 fun printLength(obj: Any?) {
